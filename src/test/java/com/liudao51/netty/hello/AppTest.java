@@ -1,4 +1,4 @@
-package com.liudao51.netty;
+package com.liudao51.netty.hello;
 
 import static org.junit.Assert.assertTrue;
 
