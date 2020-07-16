@@ -12,11 +12,11 @@ import io.netty.handler.stream.ChunkedWriteHandler;
 /**
  * 初始化器，channel注册后，会执行里面的相应的初始化方法
  */
-public class WsServerIntializer extends ChannelInitializer<SocketChannel> {
+public class ChatServerChannelInitializer extends ChannelInitializer<SocketChannel> {
     @Override
-    protected void initChannel(SocketChannel socketChannel) throws Exception {
+    protected void initChannel(SocketChannel channel) throws Exception {
         //通过SocketChannel去获得对应的pipeline管道
-        ChannelPipeline pipeline = socketChannel.pipeline();
+        ChannelPipeline pipeline = channel.pipeline();
 
         //============== 以下是用于支持Http协议 ===============
 

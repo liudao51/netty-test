@@ -18,6 +18,7 @@ public class HelloHandler extends SimpleChannelInboundHandler<HttpObject> {
         //获取channel
         Channel channel = ctx.channel();
 
+        //只处理Http请求消息
         if(msg instanceof HttpRequest) {
             System.out.println(channel.remoteAddress());
 
