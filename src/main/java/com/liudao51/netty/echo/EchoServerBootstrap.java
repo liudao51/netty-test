@@ -21,7 +21,7 @@ public class EchoServerBootstrap {
     }
 
     /**
-     * netty服务器启动方法
+     * netty服务端启动方法
      */
     public void start() throws Exception {
         EventLoopGroup boosGroup = new NioEventLoopGroup(); //boss线程组

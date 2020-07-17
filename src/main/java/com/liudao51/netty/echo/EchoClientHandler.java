@@ -8,6 +8,7 @@ import io.netty.util.CharsetUtil;
 
 /**
  * 自定义客户端处理器handler
+ * 通道中消息类型建议使用netty提供的高速缓冲区ByteBuf类型(不建议使用String类型)
  */
 public class EchoClientHandler extends ChannelInboundHandlerAdapter {
     @Override
@@ -17,6 +18,7 @@ public class EchoClientHandler extends ChannelInboundHandlerAdapter {
     }
 
     //这里不是重写channelReadComplete方法,因为是客户端主动首先发出消息的，所以需要在channelActive方法中发出
+    //通道中消息类型建议使用netty提供的高速缓冲区ByteBuf类型(不建议使用String类型)
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
         ctx.writeAndFlush(Unpooled.copiedBuffer("Hello,服务端~", CharsetUtil.UTF_8));

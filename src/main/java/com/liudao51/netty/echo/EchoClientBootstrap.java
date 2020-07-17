@@ -22,6 +22,9 @@ public class EchoClientBootstrap {
         this.port = port;
     }
 
+    /**
+     * netty客户端启动方法
+     */
     public void start() throws Exception {
         EventLoopGroup clientGroup = new NioEventLoopGroup(1);
         Scanner scanner = null;

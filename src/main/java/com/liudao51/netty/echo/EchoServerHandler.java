@@ -8,6 +8,7 @@ import io.netty.util.CharsetUtil;
 
 /**
  * 服务端处理器handler
+ * 通道中消息类型建议使用netty提供的高速缓冲区ByteBuf类型(不建议使用String类型)
  */
 //由于我们的应用很简单，只需要继承 ChannelInboundHandlerAdapter 就行了。这个类 提供了默认 ChannelInboundHandler 的实现。另外直接继承SimpleChannelInboundHandler类也是可以的。
 public class EchoServerHandler extends ChannelInboundHandlerAdapter {
